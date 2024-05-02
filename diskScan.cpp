@@ -35,13 +35,14 @@ int main()
             break;
     }
     k = i;
-    if (k < n / 2)
+    
+   if (k < n / 2)
     {
         for (i = k; i < a.size(); i++)
         {
             b.push_back(a[i]);
         }
-        for (i = 0; i <= k - 1; i++)
+        for (i = k-1; i >=0; i--)
         {
             b.push_back(a[i]);
         }
@@ -52,12 +53,11 @@ int main()
         {
             b.push_back(a[i]);
         }
-        for (i = a.size() - 1; i >= k + 1; i--)
+        for (i = k+1; i<a.size(); i++)
         {
             b.push_back(a[i]);
         }
-    }
-    temp = b[0];
+    } temp = b[0];
     cout << temp;
     for (i = 1; i < b.size(); i++)
     {
@@ -70,3 +70,7 @@ int main()
     cout << "Average head movement = " << (float)sum / n << '\n';
     return 0;
 }
+
+//0 1 2 5 6 8 9 10
+//k=4
+//n/2 = (2)
